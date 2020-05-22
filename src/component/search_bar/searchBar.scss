@@ -1,0 +1,35 @@
+@mixin ipad() {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+.searchbar {
+  padding:2rem;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 2rem;
+  @include ipad(){
+    justify-content: center;
+  }
+
+  input {
+    padding: 0.5rem;
+  }
+
+  button {
+    color: white;
+    background: black;
+    border: 1px solid #4c4848;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    cursor: pointer;
+  }
+
+  span {
+    color: #908989;
+  }
+}

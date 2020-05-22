@@ -1,0 +1,48 @@
+@mixin ipad() {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin iphone() {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+
+.weather-detail {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  padding: 2rem;
+
+  .weather-detail-Info {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+
+    p {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+  }
+  .future-weather-info {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+
+    p {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+  }
+}
+
+.fontColor1 {
+  color: #999;
+}
+.fontColor2 {
+  font-weight: bold;
+}

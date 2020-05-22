@@ -1,0 +1,61 @@
+@mixin ipad() {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin iphone() {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+/* (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px */
+html {
+  font-size: 62.5%;
+  background: linear-gradient(
+    to bottom right,
+    rgb(114, 135, 254),
+    rgb(130, 88, 186)
+  );
+  height: 100%;
+  width: 100%;
+}
+
+.App {
+
+  .container {
+    max-width: 140rem;
+    background-color: black;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px 4px #999;
+    padding: 1rem;
+    margin: 12rem auto;
+    @include ipad() {
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: white;
+      display: flex;
+      flex-wrap: wrap;
+
+      .card-left {
+        flex: 70%;
+        padding: 1rem;
+        background: url("./image/background.jpg");
+        background-size: cover;
+      }
+
+      .card-right {
+        flex: 30%;
+      }
+    }
+  }
+}
